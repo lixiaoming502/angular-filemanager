@@ -6,6 +6,7 @@ var templateCache = require('gulp-angular-templatecache');
 var uglify = require('gulp-uglify');
 var minifyCss = require('gulp-clean-css');
 var concat = require('gulp-concat');
+var zip = require('gulp-zip');
 var eslint = require('gulp-eslint');
 var del = require('del');
 var path = require('path');
@@ -69,6 +70,22 @@ gulp.task('lint', function () {
     }))
     .pipe(eslint.format())
     .pipe(eslint.failOnError());
+});
+
+gulp.task('bundle', function () {
+    return gulp.src([
+      '**',
+      '!bundle/',
+      '!bundle/**',
+      '!node_modules/',
+      '!node_modules/**',
+      '!src/',
+      '!src/**',
+      '!target/',
+      '!target/**',
+    ], {base: "."})
+        .pipe(zip('master-' + (new Date()).toISOString().split('T')[0] + '.zip'))
+        .pipe(gulp.dest('bundle'))
 });
 
 gulp.task('default', ['concat-uglify-js', 'minify-css']);
