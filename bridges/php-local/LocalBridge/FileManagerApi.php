@@ -19,7 +19,7 @@ class FileManagerApi
             ini_set('display_errors', 0);
         }
 
-        $this->basePath = $basePath ?: dirname(__DIR__);
+        $this->basePath = $basePath ?: dirname(__DIR__) . '/../../files';
         $this->translate = new Translate($lang);
     }
 
