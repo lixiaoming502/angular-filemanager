@@ -4,7 +4,7 @@ This branch is supposed to help people who want something that works out-of-the-
 
 ### Usage
 
-1. Download [current bundle](https://github.com/durasj/angular-filemanager/raw/bundle-php-local/bundle/master-2017-04-14.zip)
+1. Download [current bundle](https://github.com/durasj/angular-filemanager/raw/bundle-php-local/bundle/master-2017-04-23.zip)
 2. Extract archive somewhere where you can run PHP applications like on your hosting or htdocs directory on XAMPP (php-xml extension is required). If you don't have any, don't worry, check FAQ question [I don't have any PHP environment, how can I setup one?](https://github.com/durasj/angular-filemanager/tree/bundle-php-local#i-dont-have-any-php-environment-how-can-i-setup-one)
 3. Open the directory where you extracted the archive in your browser
 4. Enjoy. It's preconfigured to work with ./files directory at the root of the project
